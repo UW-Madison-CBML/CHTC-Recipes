@@ -1,5 +1,5 @@
 Universe   = container
-container_image = docker://lsvaren/transformers
+container_image = docker://lsvaren/transformers2
 Executable = run_inference.sh
 transfer_input_files = model_inference.py,tutorial_0.pth,tutorial_0_inputs.tar.gz
 

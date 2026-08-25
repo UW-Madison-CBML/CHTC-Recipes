@@ -1,9 +1,7 @@
 #/bin/bash
 
 ##### Additional packages needed not in your docker container yet
-pip install torch==2.10.0
-pip install librosa
-pip install wandb
+# pip install wandb
 
 ##### Uncomment this if you have any api keys, this specifies WANDB_KEY
 # if [ -f "api_keys.txt" ]; then

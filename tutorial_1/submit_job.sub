@@ -1,5 +1,5 @@
 Universe   = container
-container_image = docker://lsvaren/transformers
+container_image = docker://lsvaren/transformers2
 Executable = run_script.sh
 transfer_input_files = train_model.py,tutorial_1_inputs.tar.gz
 

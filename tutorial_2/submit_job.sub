@@ -1,5 +1,5 @@
 Universe   = container
-container_image = docker://usernm/container_name #docker://lsvaren/transformers
+container_image = docker://usernm/container_name #docker://lsvaren/transformers2
 Executable = run_script.sh
 transfer_input_files = model_og.py,model.py,api_keys.txt,osdf:///chtc/staging/net_id/files.tar.gz
 arguments = $(arg1) $(arg2) $(arg3)

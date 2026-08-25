@@ -1,12 +1,7 @@
 #/bin/bash
 
 ##### Additional packages needed not in your docker container yet
-pip install torch==2.10.0
-pip install torchvision==0.25.0
-pip install tifffile
-pip install pillow
-pip install matplotlib
-pip install seaborn
+# pip install wandb
 
 # Unzip input image files
 echo "unzip"

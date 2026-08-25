@@ -1,7 +1,6 @@
 #/bin/bash
 
 ##### Additional packages needed not in your docker container yet
-pip install torch==2.10.0
 pip install librosa
 pip install wandb
 
@@ -23,7 +22,7 @@ pip install wandb
 
 echo "Running"
 
-basename="/staging/svaren/google_lstm/all_birds"
+basename="/staging/svaren/google_lstm/all_birds"  # Change this to whatever path
 savename="${basename}.pth"
 pklname="${basename}.pkl"
 

@@ -1,5 +1,5 @@
 Universe   = container
-container_image = docker://lsvaren/transformers # Edit if needed
+container_image = docker://lsvaren/transformers2 # Edit if needed
 transfer_input_files = your_files.txt,your_dir
 
 should_transfer_files = YES

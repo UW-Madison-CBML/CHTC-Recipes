@@ -6,13 +6,13 @@ Download docker desktop from [here](https://www.docker.com/products/docker-deskt
 
 After downloading, open the application and create an account. You can now log into [Docker Hub](https://hub.docker.com/explore). In Docker Hub, you can check that your containers were pushed and look for pre-existing docker images.
 
-### Prepare dockerfile with pip
+### Prepare dockerfile with pip (RECOMMENDED)
 1. Download `docker_pip`. This folder has a sample `requirements.txt` and the needed dockerfile. Once downloaded, navigate to the directory in your local terminal.
 2. Edit the `requirements.txt` to include your needed versions or packages (versions can also be left off)
 3. Edit the dockerfile to include any additional software you need. The current file installs everything you need for a basic python environment (wget, python3, pip, git, vim, and basic command line commands)
 
 
-### Create dockerfile with conda
+### Create dockerfile with conda (SLOW)
 1. Download `docker_conda`. This folder has a sample `environment.yml` and the needed dockerfile. Once downloaded, navigate to the directory in your local terminal.
 2. Edit the `environment.yml` to include your needed versions or packages. If you want to generate your own `environment.yml` file from a conda environment, follow steps 3-4. Otherwise move to step 5.
 3. To generate your own `environment.yml`, activate your conda environment locally with `conda activate conda_env`
