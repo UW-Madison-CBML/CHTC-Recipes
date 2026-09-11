@@ -1,0 +1,36 @@
+log = agents.log
+docker_network_type = host
+
+container_image = docker://lsvaren/agents-ai # Change to your image
+
+
+transfer_executable = false
+
+# Input files to transfer (MUST BE ON LOCAL DEVICE)
+transfer_input_files = launch_job.sh,python.py
+when_to_transfer_output = ON_EXIT_OR_EVICT
+# See https://htcondor.readthedocs.io/en/main/faq/users/transfer-files-on-rm.html
+My.SpoolOnEvict = false
+
+executable = /bin/sleep
+arguments = 12h
+output = agents.out
+error = agents.err
+
+# Adjust resources as desired
+request_cpus = 16
+request_memory = 135GB
+request_disk = 300GB
+
+requirements= (Machine=="bhaskargpu4000.chtc.wisc.edu")
+#requirements = (CUDADriverVersion >= 12.0)
+
+## If using GPUs:
++WantGPULab = true
++GPUJobLength = "short"
+#+is_resumable = true
+request_gpus = 1
+## adjust as desired:
+#gpus_minimum_memory = 20GB
+#gpus_minimum_capability = 8.0
+#gpus_maximum_capability = 8.9
