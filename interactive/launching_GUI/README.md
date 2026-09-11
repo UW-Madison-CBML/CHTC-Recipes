@@ -6,6 +6,8 @@ To avoid constantly signing in follow the instructions [here](https://chtc.cs.wi
 
 If you don't set up the persistent connection, expect to have to enter your password+duo push 8+ times.
 
+**DO NOT FORGET TO `condor_rm <job_id>` WHEN YOU ARE DONE**
+
 
 # Files and what they do
 | File name | Function | 
