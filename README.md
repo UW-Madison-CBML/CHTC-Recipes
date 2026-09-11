@@ -10,6 +10,13 @@ Each folder in this repo contains it's own markdown file describing how to use e
 4. **tutorial_1**: Learn how to train a model 
 5. **tutorial_2**: Learn how to do a multi-job submission `**NOT DONE**`
 
+**TO-DO**
+1. Jupyter notebooks (H200, CPU, GPU)
+2. `+is_resumable=true`; short, medium, long times
+3. Graceful eviction
+4. Streamlit/GUI app launching
+
+
 # Helpful links
 Request a CHTC account [here](https://chtc.cs.wisc.edu/uw-research-computing/form.html)
 
