@@ -2,6 +2,8 @@
 
 These scripts (`chtc-port`, `launch_job.sh`, and `submit_job.sub`) are set up to connect to CHTC and run a GUI locally.
 
+Follow the 
+
 To avoid constantly signing in follow the instructions [here](https://chtc.cs.wisc.edu/uw-research-computing/configure-ssh)
 
 If you don't set up the persistent connection, expect to have to enter your password+duo push 8+ times.
@@ -20,10 +22,13 @@ If you don't set up the persistent connection, expect to have to enter your pass
 
 # How to launch job on CHTC
 
-### Download the `holder` directory onto your local device
+### Download this `launching_GUI` directory onto your local device
 ```
 # Navigate into the directory (local)
-cd /path/to/holder/
+cd /path/to/launching_GUI/
+
+# Rename the directory to what you want (this will also be copied CHTC)
+mv launching_GUI my_project_gui
 ```
 
 ### Edit `chtc-port`
@@ -40,7 +45,7 @@ AP_USER="your_netid" #${AP_USER:-${USER}}"
 Add your files to line 170
 
 ```
-scp -qr "$local_submit_file" "$local_launch_script" "${ap_host}:${remote_submit_dir}/" app.py
+scp -qr "$local_submit_file" "$local_launch_script" "${ap_host}:${remote_submit_dir}/" python.py
 ```
 
 ### Make executable

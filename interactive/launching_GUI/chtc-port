@@ -14,6 +14,7 @@
 # 1. Edit AP_HOST on line 25 to your AP (2001 or 2002)
 # 2. Edit AP_USER to your netID on line 26
 # 3. Edit the scp command to include the files you need transferred to CHTC (line 179)
+# 4. Edit the commands at the end of line 369 to match what you are trying to do
 
 # Do NOT change scp -qr "$local_submit_file" "$local_launch_script" "${ap_host}:${remote_submit_dir}/" 
 
@@ -177,7 +178,7 @@ submit_job() {
     #######################
     # EDIT HERE AS NEEDED #
     # Will probably be the same files you indicate in the .sub file
-    scp -qr "$local_submit_file" "$local_launch_script" "${ap_host}:${remote_submit_dir}/" app.py
+    scp -qr "$local_submit_file" "$local_launch_script" "${ap_host}:${remote_submit_dir}/" python.py
     #######################
     #######################
 
@@ -366,7 +367,7 @@ launch_job() {
 
     # Pass the launch command as an argument: docker/container-universe jobs cannot
     # allocate a PTY for a non-interactive session ("the input device is not a TTY")
-    ssh "${ap_host}" "unset SSH_AUTH_SOCK; condor_ssh_to_job -auto-retry ${job_id} 'if [ -f ./launch_job.sh ]; then nohup ./launch_job.sh ${port} > agents.log 2>&1 & else export HOME=\$(pwd); nohup streamlit run app.py --server.port=${port} > agents.log 2>&1 & fi'"
+    ssh "${ap_host}" "unset SSH_AUTH_SOCK; condor_ssh_to_job -auto-retry ${job_id} 'if [ -f ./launch_job.sh ]; then nohup ./launch_job.sh ${port} > job.log 2>&1 & else export HOME=\$(pwd); nohup streamlit run app.py --server.port=${port} > streamlit.log 2>&1 & fi'"
 }
 
 # Wait for streamlit to write its URL to agents.log on the EP

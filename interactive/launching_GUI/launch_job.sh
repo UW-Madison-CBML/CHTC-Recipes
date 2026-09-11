@@ -3,8 +3,10 @@
 #####################################################################
 # INSTRUCTIONS
 # 1. Edit line 20 to echo the message you want
-# 2. Edit line 48 to check for your required software
-# 3. Edit line 50 to include the command you want to run (here it's launching streamlit)
+# 2. Edit line 25 and 26 to change the output error message
+# 3. Edit line 32 to check for your required software
+# 4. Edit line 48 to meet your needs
+# 5. Edit line 50 to include the command you want to run (here it's launching streamlit)
 #####################################################################
 
 port_number="$1"
